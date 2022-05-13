@@ -1,0 +1,9 @@
+[submodule "src/libressl-2.4.1"]
+	path = src/libressl-2.4.1
+	url = git@github.com:LeoneChen/libressl-2.4.1.git
+[submodule "src/squid"]
+	path = src/squid
+	url = git@github.com:LeoneChen/squid.git
+[submodule "src/nginx"]
+	path = src/nginx
+	url = git@github.com:LeoneChen/nginx.git

@@ -1,0 +1,63 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(nginx) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/home/leone/文档/SGX_APP/TaLoS/src/nginx/install/sbin/nginx",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "/home/leone/文档/SGX_APP/TaLoS/src/nginx",
+            "environment": [],
+            "externalConsole": false,
+            "miDebuggerPath": "/opt/intel/sgxsdk/bin/sgx-gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description":  "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "(squid) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/home/leone/文档/SGX_APP/TaLoS/src/squid/install/sbin/squid",
+            "args": [
+                "-CNd3"
+            ],
+            "stopAtEntry": false,
+            "cwd": "/home/leone/文档/SGX_APP/TaLoS/src/squid",
+            "environment": [
+                {
+                    "name": "LD_LIBRARY_PATH",
+                    "value": "${LD_LIBRARY_PATH}:/home/leone/文档/SGX_APP/TaLoS/src/.openssl/lib"
+                }
+            ],
+            "externalConsole": false,
+            "miDebuggerPath": "/opt/intel/sgxsdk/bin/sgx-gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}
